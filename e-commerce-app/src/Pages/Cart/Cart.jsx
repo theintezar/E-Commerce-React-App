@@ -34,22 +34,21 @@ function CartPage() {
                   className="w-16 h-16 object-contain rounded-md"
                 />
                 <div className="ml-4">
-                  <h2 className="text-lg font-semibold">{item.title}</h2>
+                  <h2 className="text-lg font-semibold mr-2">{item.title}</h2>
                   <p className="text-gray-600">
                     ${item.price} Quantity:{item.quantity}
                   </p>
                 </div>
               </div>
 
-              <div className="grid justify-center items-center">
-                <div className="font-semibold">
+              <div className="flex flex-col justify-center items-center gap-1">
+                <div className="font-semibold text-center">
                   ${item.price * item.quantity}
                 </div>
                 <div className="flex justify-center items-center">
                   <FaPlusCircle
                     onClick={() => {
                       dispatch({ type: "INCREMENT_ITEM", payload: item.id });
-                      console.log("hello world");
                     }}
                     className="p-1 bg-orange-400 rounded-full hover:bg-white cursor-pointer"
                     color="black"

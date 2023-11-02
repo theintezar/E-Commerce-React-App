@@ -14,7 +14,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          selectedCategory == "All"
+          selectedCategory === "All"
             ? "https://fakestoreapi.com/products"
             : `https://fakestoreapi.com/products/category/${selectedCategory}`
         );
