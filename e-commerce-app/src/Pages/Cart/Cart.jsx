@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { FaPlusCircle, FaMinusCircle, FaTrash } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ function CartPage() {
       style={{ width: "100%", minHeight: "100vh" }}
     >
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
-      {cartState.items.length === 0 ? (
+      {cartState?.items?.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <div>

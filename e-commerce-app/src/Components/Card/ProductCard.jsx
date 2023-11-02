@@ -4,7 +4,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 import { CartContext } from "../../Context/CartContext";
 
 const ProductCard = ({ product }) => {
-  const { cartState, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
 
   return (
     <>
